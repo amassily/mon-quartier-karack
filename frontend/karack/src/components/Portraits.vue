@@ -7,8 +7,20 @@
       <h2>Historique de Karack</h2>
       <div class="section-content">
         <p>
-          Karack est un quartier historique avec des racines profondes dans la
-          culture locale. Voici les grands hommes qui ont marqué son histoire.
+          Le quartier de Sicap Karack, situé dans la commune de
+          Mermoz-Sacré-Cœur à Dakar, est l'un des premiers ensembles
+          résidentiels développés par la Société Immobilière du Cap-Vert
+          (SICAP). Créée en 1950 par le gouvernement français pour répondre à la
+          crise du logement à Dakar, la SICAP a lancé la construction de
+          plusieurs cités, dont Karack en 1953. 
+          Dès sa création, Sicap Karack s'est distingué par sa diversité
+          culturelle et sociale, devenant un véritable îlot de métissage au cœur
+          de Dakar. Le quartier a attiré des résidents de différentes origines,
+          contribuant à une riche mosaïque culturelle. Au fil des
+          décennies, Sicap Karack a su préserver son identité tout en s'adaptant
+          aux évolutions urbaines de Dakar. Aujourd'hui, il est reconnu pour son
+          dynamisme communautaire et sa contribution à la diversité culturelle
+          de la capitale sénégalaise.
         </p>
       </div>
     </div>
@@ -16,10 +28,18 @@
     <div class="section">
       <h2>Les Grands Hommes de Karack</h2>
       <div class="section-content">
-        <div v-for="portrait in portraits" :key="portrait.id" class="section-item">
+        <div
+          v-for="portrait in portraits"
+          :key="portrait.id"
+          class="section-item"
+        >
           <button @click="voirDetails(portrait)" class="image-link">
             <div class="image-overlay">
-              <img :src="portrait.image" alt="Image du grand homme" class="image" />
+              <img
+                :src="portrait.image"
+                alt="Image du grand homme"
+                class="image"
+              />
             </div>
             <div class="overlay-text">
               <h3>{{ portrait.nom }}</h3>

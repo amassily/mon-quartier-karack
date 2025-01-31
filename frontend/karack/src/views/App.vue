@@ -26,9 +26,30 @@
 
         <li><router-link to="/portraits">Portraits</router-link></li>
         <li><router-link to="/apropos">À propos</router-link></li>
-        <li><button @click="identification">S'identifier</button></li>
+        <li><button @click="toggleLogin">S'identifier</button></li>
       </ul>
     </nav>
+
+    <!-- Formulaire de connexion qui s'affiche après avoir cliqué sur "S'identifier" -->
+    <div v-if="isLoginVisible" class="login-form">
+      <h2>Page de Connexion</h2>
+      <form>
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required />
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required />
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" required />
+
+        <label for="numero">Numéro :</label>
+        <input type="tel" id="numero" name="numero" required />
+
+        <button type="submit">Enregistrer</button>
+      </form>
+      <button @click="toggleLogin">Fermer</button>
+    </div>
 
     <!-- Afficher la page correspondante ici -->
     <router-view></router-view>
@@ -38,9 +59,14 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      isLoginVisible: false, // Variable pour afficher/masquer la page de connexion
+    };
+  },
   methods: {
-    identification() {
-      alert("Ouvre la page de connexion !");
+    toggleLogin() {
+      this.isLoginVisible = !this.isLoginVisible; // Bascule la visibilité du formulaire
     },
   },
 };
@@ -150,6 +176,7 @@ button:hover {
   top: 100%;
 }
 
+/* Afficher le sous-menu au survol du parent */
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -172,42 +199,50 @@ button:hover {
   border-radius: 5px;
 }
 
-/* Styles des images */
-.image-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  position: relative;
-}
-
-/* Styles pour les images */
-.image {
-  width: 100%;
-  height: auto;
+/* Styles pour le formulaire de connexion */
+.login-form {
+  background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-/* Lors du survol de l'image */
-.image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-/* Texte sur les images */
-.overlay-text {
-  position: absolute;
-  bottom: 10px;
+  position: fixed;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  color: black;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 80%;
+  max-width: 500px;
+  z-index: 20;
+}
+
+.login-form h2 {
   text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.login-form input {
   width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #45a049;
 }
 </style>

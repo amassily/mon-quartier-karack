@@ -50,43 +50,46 @@ export default {
       entreprises: [
         {
           id: 1,
-          nom: "Boulangerie du Quartier",
+          nom: "Le reference",
           image: "https://via.placeholder.com/300x200",
           description:
-            "Une boulangerie locale avec des produits frais chaque matin.",
-          adresse: "Rue 1, Quartier Karack",
+            "L'Auto-école Référence est située à Sicap Karack, Dakar, Sénégal. Elle propose des cours de conduite dans un cadre convivial, dispensés par une équipe qualifiée, à des prix justes et honnêtes. Elle est reconnue pour la qualité de son enseignement et son taux de réussite acceptable, se classant parmi les meilleures écoles de conduite du Sénégal.",
+          adresse: "Quartier Karack",
           contact: "0771234567",
         },
         {
           id: 2,
-          nom: "Salon de Coiffure Bella",
+          nom: "La Maison du Pain",
           image: "https://via.placeholder.com/300x200",
-          description: "Un salon de coiffure moderne et convivial.",
-          adresse: "Rue 2, Quartier Karack",
+          description:
+            "La Maison du Pain est une boulangerie-pâtisserie située à Dakar, Sénégal. Elle propose une variété de pains et de pâtisseries.",
+          adresse: "Quartier Karack, à cotê de la mosquée",
           contact: "0777654321",
         },
         {
           id: 3,
-          nom: "Garage Auto Karack",
+          nom: "DRP",
           image: "https://via.placeholder.com/300x200",
-          description: "Garage spécialisé dans les réparations mécaniques.",
-          adresse: "Rue 3, Quartier Karack",
+          description:
+            "Le Dépôt Régional Pharmaceutique (DRP) est une structure clé dans le système de santé au Sénégal. Il joue un rôle central dans la distribution et l'approvisionnement en médicaments essentiels pour les structures de santé publiques et privées, comme les centres de santé, les hôpitaux et les postes de santé. Le DRP veille à ce que les médicaments soient accessibles et disponibles dans toute la région, en garantissant la qualité des produits pharmaceutiques et en respectant les normes de stockage et de distribution.",
+          adresse: "Quartier Karack",
           contact: "0779876543",
         },
         {
           id: 4,
-          nom: "Pharmacie Karack Santé",
+          nom: "SELMA",
           image: "https://via.placeholder.com/300x200",
-          description: "Pharmacie de proximité avec un service rapide.",
-          adresse: "Rue 4, Quartier Karack",
+          description:
+            "La Pharmacie Sela est située à Sicap Karack, Dakar, Sénégal. Elle propose une gamme de services pharmaceutiques, y compris la vente de médicaments sur ordonnance et en vente libre, ainsi que des produits de santé et de bien-être.",
+          adresse: "Quartier Karack",
           contact: "0781234567",
         },
         {
           id: 5,
-          nom: "Restaurant Saveurs Africaines",
+          nom: "Restaurant",
           image: "https://via.placeholder.com/300x200",
           description:
-            "Restaurant proposant des plats traditionnels africains.",
+            "Seoul, Bologne",
           adresse: "Rue 5, Quartier Karack",
           contact: "0787654321",
         },
